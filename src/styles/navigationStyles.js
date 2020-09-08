@@ -8,7 +8,7 @@ export const Nav = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: block;
-  background: #ea281e;
+  background: ${props => props.theme.red};
   color: #000;
   z-index: 100;
   overflow: hidden;
@@ -90,14 +90,14 @@ export const NavVideos = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 25%;
+  left: 28%;
   z-index: -1;
   height: 100%;
   width: 100%;
   background: #000;
   .reveal {
     width: 100%;
-    background: #ea281e;
+    background: ${props => props.theme.red};
     position: absolute;
     top: 0;
     bottom: 0;

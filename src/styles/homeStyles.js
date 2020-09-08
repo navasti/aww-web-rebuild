@@ -176,7 +176,7 @@ export const About = styled.div`
     color: ${props => props.theme.text};
   }
 `
-export const Services = styled.div``
+// export const Services = styled.div``
 
 //Accordion
 
@@ -189,8 +189,8 @@ export const AccordionHeader = styled(motion.div)`
   font-weight: 600;
   font-size: 1.15rem;
   margin: 8px 0;
-  }
 `
+
 export const AccordionIcon = styled.div`
   display: flex;
   align-items: center;
