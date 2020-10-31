@@ -14,7 +14,7 @@ const navRoutes = [
    { id: 4, title: "50 beaches", path: "/50-beaches", video: "50-beaches.mp4" }
 ]
 
-const Navigation = ({ toggleMenu, setToggleMenu }) => {
+const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
    const [revealVideo, setRevealVideo] = useState({
       show: false,
       video: "featured-video.mp4",
@@ -34,7 +34,10 @@ const Navigation = ({ toggleMenu, setToggleMenu }) => {
                      <NavHeader>
                         <Flex spaceBetween noHeight>
                            <h2>Projects</h2>
-                           <CloseNav onClick={() => setToggleMenu(!toggleMenu)}>
+                           <CloseNav
+                              onClick={() => setToggleMenu(!toggleMenu)}
+                              onMouseEnter={() => onCursor('pointer')}
+                              onMouseLeave={onCursor}>
                               <button>
                                  <span></span>
                                  <span></span>
@@ -46,6 +49,8 @@ const Navigation = ({ toggleMenu, setToggleMenu }) => {
                         <ul>
                            {navRoutes.map(route => (
                               <motion.li
+                                 onMouseEnter={() => onCursor('pointer')}
+                                 onMouseLeave={onCursor}
                                  key={route.id}
                                  onHoverStart={() => setRevealVideo({
                                     show: true,
