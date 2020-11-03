@@ -4,6 +4,13 @@ import React, { createContext, useReducer, useContext } from "react"
 const GlobalStateContext = createContext()
 const GlobalDispatchContext = createContext()
 
+// Initial State
+const initialState = {
+   currentTheme: window.localStorage.getItem("theme") == null ? "dark" : window.localStorage.getItem("theme"),
+   cursorType: false,
+   cursorStyles: ["pointer", "hovered"],
+}
+
 // Reducer
 const globalReducer = (state, action) => {
    switch (action.type) {
@@ -26,11 +33,7 @@ const globalReducer = (state, action) => {
 }
 
 export const GlobalProvider = ({ children }) => {
-   const [state, dispatch] = useReducer(globalReducer, {
-      currentTheme: window.localStorage.getItem("theme") == null ? "dark" : window.localStorage.getItem("theme"),
-      cursorType: false,
-      cursorStyles: ["pointer", "hovered"],
-   })
+   const [state, dispatch] = useReducer(globalReducer, initialState)
 
    return (
       <GlobalDispatchContext.Provider value={dispatch}>

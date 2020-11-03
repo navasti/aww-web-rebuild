@@ -40,7 +40,7 @@ export const Headline = styled(motion.span)`
 `
 
 //Content Section
-export const HomeContentSection = styled.div`
+export const HomeContentSection = styled(motion.div)`
   margin-bottom: 200px;
 `
 export const Content = styled(motion.h2)`
