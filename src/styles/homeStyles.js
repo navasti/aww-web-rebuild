@@ -157,9 +157,9 @@ export const FeaturedProjects = styled.div`
 //ABOUT SECTION
 
 export const HomeAboutSection = styled(motion.div)`
-  /* margin-bottom: 200px; */
+  margin-bottom: 200px;
 `
-export const About = styled.div`
+export const About = styled(motion.div)`
   width: 100%;
   h2 {
     width: 60%;
@@ -176,7 +176,7 @@ export const About = styled.div`
     color: ${props => props.theme.text};
   }
 `
-// export const Services = styled.div``
+export const Services = styled.div``
 
 //Accordion
 
