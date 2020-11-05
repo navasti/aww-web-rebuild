@@ -6,10 +6,10 @@ export const FooterNav = styled.div`
 `
 
 export const FooterContent = styled.div`
-  color: #ea281e;
-  font-size: 22px;
+  color: ${props => props.theme.red};
+  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 8px;
+  line-height: .5rem;
   flex: 1;
   ${props =>
     props.wider &&

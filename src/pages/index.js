@@ -10,7 +10,7 @@ import HomeAbout from "../components/homePage/HomeAbout"
 // Contex
 import { useGlobalStateContext, useGlobalDispatchContext } from "../context/globalContext"
 
-const IndexPage = props => {
+const IndexPage = () => {
   const { cursorStyles } = useGlobalStateContext()
   const dispatch = useGlobalDispatchContext()
 

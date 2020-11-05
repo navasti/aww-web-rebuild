@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react"
+
+// Styled Components
 import { Banner, Video, Canvas, BannerTitle, Headline } from "../../styles/homeStyles"
 
 // Context

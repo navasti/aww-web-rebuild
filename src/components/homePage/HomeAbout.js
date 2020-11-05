@@ -1,8 +1,21 @@
 import React, { useState, useEffect } from 'react'
+
+// Styled Components
 import { Container, Flex } from '../../styles/globalStyles'
-import { About, Services, AccordionContent, AccordionHeader, AccordionIcon, HomeAboutSection } from '../../styles/homeStyles'
+import {
+   About,
+   Services,
+   AccordionContent,
+   AccordionHeader,
+   AccordionIcon,
+   HomeAboutSection
+} from '../../styles/homeStyles'
+
+// Scroll Behavior
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+
+// Context
 import { useGlobalStateContext } from '../../context/globalContext'
 
 const accordionIds = [

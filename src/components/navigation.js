@@ -4,7 +4,11 @@ import { motion, AnimatePresence } from "framer-motion"
 
 // Styled Components
 import { Container, Flex } from "../styles/globalStyles"
+import { FooterContent, FooterSocial } from '../styles/footerStyles'
 import { Nav, CloseNav, NavHeader, NavList, NavFooter, NavVideos } from "../styles/navigationStyles"
+
+// Icons
+import { Instagram, Facebook, Vimeo } from '../assets/svg/social-icons'
 
 const navRoutes = [
    { id: 0, title: "not humble", path: "/not-humble", video: "featured-video.mp4" },
@@ -35,8 +39,8 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                         <Flex spaceBetween noHeight>
                            <h2>Projects</h2>
                            <CloseNav
+                              onMouseEnter={() => onCursor("locked")}
                               onClick={() => setToggleMenu(!toggleMenu)}
-                              onMouseEnter={() => onCursor('pointer')}
                               onMouseLeave={onCursor}>
                               <button>
                                  <span></span>
@@ -92,7 +96,27 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                            ))}
                         </ul>
                      </NavList>
-                     <NavFooter></NavFooter>
+                     <NavFooter>
+                        <Flex spaceBetween>
+                           <FooterContent>
+                              <p>info@furrow.studio</p>
+                           </FooterContent>
+                           <FooterContent>
+                              <p>902.315.1234</p>
+                           </FooterContent>
+                           <FooterSocial>
+                              <a onMouseEnter={() => onCursor("hovered")} onMouseLeave={onCursor} href="/">
+                                 <Instagram />
+                              </a>
+                              <a onMouseEnter={() => onCursor("hovered")} onMouseLeave={onCursor} href="/">
+                                 <Facebook />
+                              </a>
+                              <a onMouseEnter={() => onCursor("hovered")} onMouseLeave={onCursor} href="/">
+                                 <Vimeo />
+                              </a>
+                           </FooterSocial>
+                        </Flex>
+                     </NavFooter>
                      <NavVideos>
                         <motion.div animate={{ width: revealVideo.show ? 0 : "100%" }} className="reveal"></motion.div>
                         <div className="video">

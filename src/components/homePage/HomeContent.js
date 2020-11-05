@@ -4,6 +4,7 @@ import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 
+// Styled Components
 import { Container } from '../../styles/globalStyles'
 import { HomeContentSection, Content } from '../../styles/homeStyles'
 

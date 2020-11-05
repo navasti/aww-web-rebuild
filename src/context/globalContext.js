@@ -8,7 +8,7 @@ const GlobalDispatchContext = createContext()
 const initialState = {
    currentTheme: window.localStorage.getItem("theme") == null ? "dark" : window.localStorage.getItem("theme"),
    cursorType: false,
-   cursorStyles: ["pointer", "hovered"],
+   cursorStyles: ["pointer", "hovered", "locked"],
 }
 
 // Reducer
